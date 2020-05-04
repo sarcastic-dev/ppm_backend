@@ -1,0 +1,2 @@
+class BoomSensorInfo < ApplicationRecord
+end

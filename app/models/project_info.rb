@@ -1,0 +1,2 @@
+class ProjectInfo < ApplicationRecord
+end

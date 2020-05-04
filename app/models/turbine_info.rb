@@ -1,0 +1,2 @@
+class TurbineInfo < ApplicationRecord
+end

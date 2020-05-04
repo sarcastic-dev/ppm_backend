@@ -1,0 +1,2 @@
+class MetMastInfo < ApplicationRecord
+end
