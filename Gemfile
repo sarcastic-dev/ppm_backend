@@ -22,6 +22,7 @@ gem 'devise'
 gem 'mysql2'
 gem 'jwt',                              '~> 2.1'
 gem 'hirb', '~> 0.7.3'
+gem 'paper_trail'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

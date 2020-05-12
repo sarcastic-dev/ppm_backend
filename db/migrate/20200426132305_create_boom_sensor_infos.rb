@@ -1,7 +1,7 @@
 class CreateBoomSensorInfos < ActiveRecord::Migration[6.0]
   def change
     create_table :boom_sensor_infos do |t|
-      t.string :boom_project_id
+      t.integer :boom_project_id
       t.string :boom_top_anemometer_hoz_x
       t.string :boom_top_anemometer_hoz_y
       t.string :boom_top_anemometer_ver_x

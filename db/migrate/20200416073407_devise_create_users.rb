@@ -10,6 +10,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :phone,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.boolean :admin,              null: false, default: false
+      t.boolean :active,              null: false, default: false
       t.string :session_id,              null: false, default: ""
       ## Recoverable
       t.string   :reset_password_token

@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_132305) do
+ActiveRecord::Schema.define(version: 2020_05_05_140501) do
 
   create_table "boom_sensor_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "boom_project_id"
+    t.integer "boom_project_id"
     t.string "boom_top_anemometer_hoz_x"
     t.string "boom_top_anemometer_hoz_y"
     t.string "boom_top_anemometer_ver_x"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_132305) do
   end
 
   create_table "met_mast_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "mast_project_id"
+    t.integer "mast_project_id"
     t.string "mast_name"
     t.string "mast_Type"
     t.string "mast_height"
@@ -98,8 +98,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_132305) do
   end
 
   create_table "project_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "project_user_id"
-    t.string "project_unique_id"
+    t.integer "project_user_id"
     t.string "project_job_no"
     t.string "project_date"
     t.string "project_eng"
@@ -116,7 +115,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_132305) do
   end
 
   create_table "turbine_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "turbine_project_id"
+    t.integer "turbine_project_id"
     t.string "turbine_id"
     t.string "turbine_date"
     t.string "turbine_make"
@@ -156,6 +155,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_132305) do
     t.string "phone", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.boolean "admin", default: false, null: false
+    t.boolean "active", default: false, null: false
     t.string "session_id", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -164,6 +164,16 @@ ActiveRecord::Schema.define(version: 2020_04_26_132305) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci", force: :cascade do |t|
+    t.string "item_type", limit: 191, null: false
+    t.bigint "item_id", null: false
+    t.string "event", null: false
+    t.string "whodunnit"
+    t.text "object", size: :long
+    t.datetime "created_at"
+    t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
 end

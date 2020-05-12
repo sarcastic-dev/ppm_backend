@@ -1,7 +1,7 @@
 class CreateTurbineInfos < ActiveRecord::Migration[6.0]
   def change
     create_table :turbine_infos do |t|
-      t.string :turbine_project_id
+      t.integer :turbine_project_id
       t.string :turbine_id 
       t.string :turbine_date 
       t.string :turbine_make 

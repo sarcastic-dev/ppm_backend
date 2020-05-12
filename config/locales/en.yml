@@ -34,3 +34,6 @@ en:
   controllers:
     registrations:
       success: "Welcome! You have signed up successfully."
+      sessions:
+        success: "Welcome! You have signed in successfully."
+        error: ""  

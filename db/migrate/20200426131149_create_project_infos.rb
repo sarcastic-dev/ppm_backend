@@ -1,8 +1,7 @@
 class CreateProjectInfos < ActiveRecord::Migration[6.0]
   def change
     create_table :project_infos do |t|
-      t.string :project_user_id
-      t.string :project_unique_id
+      t.integer :project_user_id
       t.string :project_job_no
       t.string :project_date
       t.string :project_eng

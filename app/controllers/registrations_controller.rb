@@ -4,6 +4,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     build_resource(sign_up_params)
+    
     resource.save
     yield resource if block_given?
     if resource.persisted?
@@ -17,7 +18,7 @@ class RegistrationsController < Devise::RegistrationsController
     else
       clean_up_passwords resource
       set_minimum_password_length
-      render json: { message: 'Error!', errors: resource.errors.full_messages }, status: :bad_request
+      render json: { message: resource.errors.full_messages }, status: :bad_request
     end
   end
 

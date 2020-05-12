@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authorize_request
+  before_action :set_paper_trail_whodunnit
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
@@ -14,19 +15,19 @@ class ApplicationController < ActionController::API
       if !header.present?
         render json: { errors: 'Unauthorized user' }, status: :unauthorized
       else
-        if User.find_by(session_id: header)
+        if User.find_by(session_id: header, active: true)
           begin
             @decoded = JsonWebToken.decode(header)
             @current_user = User.find(@decoded[:user_id])
           rescue ActiveRecord::RecordNotFound => e
-            render json: { errors: e.message }, status: :unauthorized
+            render json: { message: e.message }, status: :unauthorized
           rescue JWT::DecodeError => e
-            render json: { errors: e.message }, status: :unauthorized
+            render json: { message: e.message }, status: :unauthorized
           rescue JWT::VerificationError => e
-            render json: { errors: e.message }, status: :unauthorized
+            render json: { message: e.message }, status: :unauthorized
           end
         else
-          render json: { errors: 'Unauthorized user' }, status: :unauthorized
+          render json: { message: 'Unauthorized user' }, status: :unauthorized
         end
       end
     end

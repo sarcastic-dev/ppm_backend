@@ -1,7 +1,7 @@
 class CreateMetMastInfos < ActiveRecord::Migration[6.0]
   def change
     create_table :met_mast_infos do |t|
-      t.string :mast_project_id 
+      t.integer :mast_project_id 
       t.string :mast_name 
       t.string :mast_Type
       t.string :mast_height
