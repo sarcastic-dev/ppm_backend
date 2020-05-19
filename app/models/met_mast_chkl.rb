@@ -1,0 +1,2 @@
+class MetMastChkl < ApplicationRecord
+end

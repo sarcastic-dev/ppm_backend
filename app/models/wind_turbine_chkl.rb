@@ -1,0 +1,2 @@
+class WindTurbineChkl < ApplicationRecord
+end

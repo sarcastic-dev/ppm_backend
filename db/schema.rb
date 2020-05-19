@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_140501) do
+ActiveRecord::Schema.define(version: 2020_05_19_012402) do
 
   create_table "boom_sensor_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "boom_project_id"
@@ -55,6 +55,12 @@ ActiveRecord::Schema.define(version: 2020_05_05_140501) do
     t.text "boom_panorama_picture_south_east"
     t.text "boom_panorama_picture_east"
     t.text "boom_panorama_picture_north_east"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "met_mast_chkls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -174,6 +180,12 @@ ActiveRecord::Schema.define(version: 2020_05_05_140501) do
     t.text "object", size: :long
     t.datetime "created_at"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
+  end
+
+  create_table "wind_turbine_chkls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

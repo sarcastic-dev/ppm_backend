@@ -29,9 +29,21 @@ module Api
     end
 
     def update
-      project_info = ProjectInfo.find(params[:id])
+      project_info = ProjectInfo.find_by(id: params[:id])
       if project_info.update(project_info_params)
         render json: { message: 'Updated successfully'}, status: :ok
+      else
+        render json: { message: 'something went wrong' }, status: 400
+      end
+    end
+
+    def destroy
+      project_info = ProjectInfo.find_by(id: params[:id])
+      if project_info.present? && project_info.delete
+        MetMastInfo.where(mast_project_id: params[:id]).delete_all
+        TurbineInfo.where(turbine_project_id: params[:id]).delete_all
+        BoomSensorInfo.where(boom_project_id: params[:id]).delete_all
+        render json: { message: 'Deleted successfully'}, status: :ok
       else
         render json: { message: 'something went wrong' }, status: 400
       end

@@ -1,0 +1,42 @@
+wind_turbine:
+  - name: Photo of Turbine
+  - name: Photo of Turbine Serial Number
+  - name: Photo of nearby Obstacles like Building, huts, water tanks and trees
+  - name: Photo of Tower Serial Number
+  - name: Panorama from Turbine Top
+  - name: Photo of Generator Serial Number
+  - name: Photo of Gearbox Serial Number
+  - name: Photo of Controller Versions
+  - name: Photo of CT and Power Transducer Serial Number
+  - name: Photo of CT Mounting
+  - name: Photo of Power Transducer Mounting
+  - name: Photo of Voltage Tapping point of Power Transducer
+  - name: Photo of Auxiliary supply tapping point of Power Transducer
+  - name: Photo of Status Signal points
+  - name: Photo of Data Logger Serial Number
+  - name: Photo of Data Logger
+  - name: Photo of Data Logger supply means
+  - name: Photo of Model and antenna
+  - name: Photo of Modem configuration
+  - name: Photo of Cable laying or wireless system
+met_mast:
+  - name: Photo of Met Mast
+  - name: Panorama from Mast Top
+  - name: Photo of Anemometer Serial Number
+  - name: Photo of Wind Vane Serial Number
+  - name: Photo of Temperature and Humidity serial number
+  - name: Photo of pressure sensor serial Number
+  - name: Photo of other sensors serial Number
+  - name: Photo of Data Logger Serial Number
+  - name: Photo of Anemometer Mounting
+  - name: Photo of Wind Vane Mounting
+  - name: Photo of Temperature and Humidity sensor mounting
+  - name: Photo of Pressure sensor mounting
+  - name: Photo of other sensors mounting
+  - name: Photo of Solar Panel Mounting
+  - name: Photo of Data Logger
+  - name: Photo of Data Logger supply means
+  - name: Photo of Model and antenna
+  - name: Photo of Modem configuration
+  - name: Photo of Cable laying or wireless system
+  
