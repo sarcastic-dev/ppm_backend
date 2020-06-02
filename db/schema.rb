@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_19_012402) do
+ActiveRecord::Schema.define(version: 2020_06_02_040309) do
 
   create_table "boom_sensor_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "boom_project_id"
@@ -116,6 +116,13 @@ ActiveRecord::Schema.define(version: 2020_05_19_012402) do
     t.string "project_rotor_dia"
     t.string "project_customer_contact"
     t.string "project_mobile_no"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "project_notes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "note_project_id", null: false
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

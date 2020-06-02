@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  include ActionController::MimeResponds
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authorize_request
   before_action :set_paper_trail_whodunnit

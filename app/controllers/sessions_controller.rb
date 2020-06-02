@@ -4,10 +4,9 @@ class SessionsController < Devise::SessionsController
 
   def create
     user = User.find_by(email: params[:email])
-    if user.active?
+    if user && user.active?
       if user && user.valid_password?(params[:password]) && sign_in(:user, user)
         token = JsonWebToken.encode(user_id: user.id)
-        
         if user.update(session_id: token)
           render json: { 
             user: {  
@@ -23,7 +22,7 @@ class SessionsController < Devise::SessionsController
         render json: { message: 'Invalid email and password' }, status: :bad_request
       end
     else
-      render json: { message: 'This account is not active' }, status: :bad_request
+      render json: { message: 'This user is not active or found' }, status: :bad_request
     end
   end
 
