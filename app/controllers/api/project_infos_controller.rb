@@ -153,18 +153,99 @@ module Api
           pdf.text "\nNo Infomation found"
         end
 
-        project_note = ProjectNote.find_by(note_project_id: project_info.id)
-        pdf.text "\n \n Project Note : ", :size => 17, :styles => [:bold]
-        if project_note.present?
+        boom_sensor_info = BoomSensorInfo.find_by(boom_project_id: project_info.id)
+        pdf.text "\n \n Boom And Sensor Info : ", :size => 17, :styles => [:bold]
 
+        if boom_sensor_info.present?
+          pdf.text "\n Boom top anemometer hoz x : #{boom_sensor_info.boom_top_anemometer_hoz_x}", :size => 14 
+          pdf.text "Boom top anemometer hoz y : #{boom_sensor_info.boom_top_anemometer_hoz_y}", :size => 14 
+          pdf.text "Boom top anemometer ver x : #{boom_sensor_info.boom_top_anemometer_ver_x}", :size => 14 
+          pdf.text "Boom top anemometer ver y : #{boom_sensor_info.boom_top_anemometer_ver_y}", :size => 14 
+          pdf.text "Boom top anemometer height : #{boom_sensor_info.boom_top_anemometer_height}", :size => 14
+          pdf.text "Boom mid anemometer hoz x : #{boom_sensor_info.boom_mid_anemometer_hoz_x}", :size => 14
+          pdf.text "Boom mid anemometer hoz y : #{boom_sensor_info.boom_mid_anemometer_hoz_y}", :size => 14
+          pdf.text "Boom mid anemometer ver x : #{boom_sensor_info.boom_mid_anemometer_ver_x}", :size => 14
+          pdf.text "Boom mid anemometer ver y : #{boom_sensor_info.boom_mid_anemometer_ver_y}", :size => 14
+          pdf.text "Boom mid anemometer height : #{boom_sensor_info.boom_mid_anemometer_height}", :size => 14
+          pdf.text "Boom shear anemometer hoz x : #{boom_sensor_info.boom_shear_anemometer_hoz_x}", :size => 14
+          pdf.text "Boom shear anemometer hoz y : #{boom_sensor_info.boom_shear_anemometer_hoz_y}", :size => 14
+          pdf.text "Boom shear anemometer ver x : #{boom_sensor_info.boom_shear_anemometer_ver_x}", :size => 14
+          pdf.text "Boom shear anemometer ver y : #{boom_sensor_info.boom_shear_anemometer_ver_y}", :size => 14
+          pdf.text "Boom shear anemometer height : #{boom_sensor_info.boom_shear_anemometer_height}", :size => 14
+          pdf.text "Boom propeller anemometer hoz x : #{boom_sensor_info.boom_propeller_anemometer_hoz_x}", :size => 14
+          pdf.text "Boom propeller anemometer hoz y : #{boom_sensor_info.boom_propeller_anemometer_hoz_y}", :size => 14
+          pdf.text "Boom propeller anemometer ver x : #{boom_sensor_info.boom_propeller_anemometer_ver_x}", :size => 14
+          pdf.text "Boom propeller anemometer ver y : #{boom_sensor_info.boom_propeller_anemometer_ver_y}", :size => 14
+          pdf.text "Boom propeller anemometer height : #{boom_sensor_info.boom_propeller_anemometer_height}", :size => 14
+          pdf.text "Boom primary wind vane hoz x : #{boom_sensor_info.boom_primary_wind_vane_hoz_x}", :size => 14
+          pdf.text "Boom primary wind vane hoz y : #{boom_sensor_info.boom_primary_wind_vane_hoz_y}", :size => 14
+          pdf.text "Boom primary wind vane ver x : #{boom_sensor_info.boom_primary_wind_vane_ver_x}", :size => 14
+          pdf.text "Boom primary wind vane ver y : #{boom_sensor_info.boom_primary_wind_vane_ver_y}", :size => 14
+          pdf.text "Boom primary wind vane height : #{boom_sensor_info.boom_primary_wind_vane_height}", :size => 14
+          pdf.text "Boom control wind vane hoz x : #{boom_sensor_info.boom_control_wind_vane_hoz_x}", :size => 14
+          pdf.text "Boom control wind vane hoz y : #{boom_sensor_info.boom_control_wind_vane_hoz_y}", :size => 14
+          pdf.text "Boom control wind vane ver x : #{boom_sensor_info.boom_control_wind_vane_ver_x}", :size => 14
+          pdf.text "Boom control wind vane ver y : #{boom_sensor_info.boom_control_wind_vane_ver_y}", :size => 14
+          pdf.text "Boom control wind vane height : #{boom_sensor_info.boom_control_wind_vane_height}", :size => 14
+          pdf.text "Boom pressure sensor height : #{boom_sensor_info.boom_pressure_sensor_height}", :size => 14
+          pdf.text "Boom temperature sensor height : #{boom_sensor_info.boom_temperature_sensor_height}", :size => 14
+          pdf.text "Boom logger box height : #{boom_sensor_info.boom_logger_box_height}", :size => 14
+        else
+          pdf.text "\nNo Infomation found"
+        end
+
+        pdf.text "\n \n Wind Turbine CheckLists : ", :size => 17, :styles => [:bold]
+
+        pdf.text "\nPhoto of Turbine : checked", :size => 14 
+        pdf.text "Photo of Turbine Serial Number : checked", :size => 14 
+        pdf.text "Photo of nearby Obstacles like Building, huts, water tanks and trees : checked", :size => 14 
+        pdf.text "Photo of Tower Serial Number : checked", :size => 14 
+        pdf.text "Panorama from Turbine Top : checked", :size => 14 
+        pdf.text "Photo of Generator Serial Number : checked", :size => 14 
+        pdf.text "Photo of Gearbox Serial Number : unchecked", :size => 14 
+        pdf.text "Photo of Controller Versions : checked", :size => 14 
+        pdf.text "Photo of CT and Power Transducer Serial Number : checked", :size => 14 
+        pdf.text "Photo of CT Mounting : unchecked", :size => 14 
+        pdf.text "Photo of Power Transducer Mounting : unchecked", :size => 14 
+        pdf.text "Photo of Voltage Tapping point of Power Transducer : unchecked", :size => 14 
+        pdf.text "Photo of Auxiliary supply tapping point of Power Transducer : unchecked", :size => 14 
+        pdf.text "Photo of Status Signal points : unchecked", :size => 14 
+        pdf.text "Photo of Data Logger Serial Number : checked", :size => 14 
+        pdf.text "Photo of Data Logger : checked", :size => 14 
+        pdf.text "Photo of Data Logger supply means : unchecked", :size => 14 
+        pdf.text "Photo of Model and antenna : checked", :size => 14 
+        pdf.text "Photo of Modem configuration : checked", :size => 14 
+        pdf.text "Photo of Cable laying or wireless system : unchecked", :size => 14 
+
+        pdf.text "\n\n Met Mast CheckLists : ", :size => 17, :styles => [:bold]
+
+        pdf.text "\nPhoto of Met Mast : checked", :size => 14
+        pdf.text "Panorama from Mast Top : checked", :size => 14
+        pdf.text "Photo of Anemometer Serial Number : unchecked", :size => 14
+        pdf.text "Photo of Wind Vane Serial Number : checked", :size => 14
+        pdf.text "Photo of Temperature and Humidity serial number : checked", :size => 14
+        pdf.text "Photo of pressure sensor serial Number : unchecked", :size => 14
+        pdf.text "Photo of other sensors serial Number : checked", :size => 14
+        pdf.text "Photo of Data Logger Serial Number : checked", :size => 14
+        pdf.text "Photo of Anemometer Mounting : checked", :size => 14
+        pdf.text "Photo of Wind Vane Mounting : unchecked", :size => 14
+        pdf.text "Photo of Temperature and Humidity sensor mounting : unchecked", :size => 14
+        pdf.text "Photo of Pressure sensor mounting : checked", :size => 14
+        pdf.text "Photo of other sensors mounting : unchecked", :size => 14
+        pdf.text "Photo of Solar Panel Mounting : checked", :size => 14
+        pdf.text "Photo of Data Logger : checked", :size => 14
+        pdf.text "Photo of Data Logger supply means : unchecked", :size => 14
+        pdf.text "Photo of Model and antenna : unchecked", :size => 14
+        pdf.text "Photo of Modem configuration : checked", :size => 14
+        pdf.text "Photo of Cable laying or wireless system : checked", :size => 14
+        
+        project_note = ProjectNote.find_by(note_project_id: project_info.id)
+        pdf.text "\n \n\n\n Project Note : ", :size => 17, :styles => [:bold]
+        if project_note.present?
           pdf.text "\nNote : #{project_note.description}", :size => 14
-       
         else
           pdf.text "\nNo note found"
         end
-
-
-
 
       else
         pdf.text "\nNo Infomation found"

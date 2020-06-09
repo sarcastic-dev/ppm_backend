@@ -1,0 +1,2 @@
+class ProjectCheckedList < ApplicationRecord
+end
