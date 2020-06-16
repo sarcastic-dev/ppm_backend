@@ -5,7 +5,7 @@ class ApplicationController < ActionController::API
   before_action :set_paper_trail_whodunnit
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email, :password])
   end
 
   protected
