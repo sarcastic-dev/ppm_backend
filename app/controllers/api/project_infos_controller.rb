@@ -196,48 +196,48 @@ module Api
 
         pdf.text "\n \n Wind Turbine CheckLists : ", :size => 17, :styles => [:bold]
 
-        pdf.text "\nPhoto of Turbine : checked", :size => 14 
-        pdf.text "Photo of Turbine Serial Number : checked", :size => 14 
-        pdf.text "Photo of nearby Obstacles like Building, huts, water tanks and trees : checked", :size => 14 
-        pdf.text "Photo of Tower Serial Number : checked", :size => 14 
-        pdf.text "Panorama from Turbine Top : checked", :size => 14 
-        pdf.text "Photo of Generator Serial Number : checked", :size => 14 
-        pdf.text "Photo of Gearbox Serial Number : unchecked", :size => 14 
-        pdf.text "Photo of Controller Versions : checked", :size => 14 
-        pdf.text "Photo of CT and Power Transducer Serial Number : checked", :size => 14 
-        pdf.text "Photo of CT Mounting : unchecked", :size => 14 
-        pdf.text "Photo of Power Transducer Mounting : unchecked", :size => 14 
-        pdf.text "Photo of Voltage Tapping point of Power Transducer : unchecked", :size => 14 
-        pdf.text "Photo of Auxiliary supply tapping point of Power Transducer : unchecked", :size => 14 
-        pdf.text "Photo of Status Signal points : unchecked", :size => 14 
-        pdf.text "Photo of Data Logger Serial Number : checked", :size => 14 
-        pdf.text "Photo of Data Logger : checked", :size => 14 
-        pdf.text "Photo of Data Logger supply means : unchecked", :size => 14 
-        pdf.text "Photo of Model and antenna : checked", :size => 14 
-        pdf.text "Photo of Modem configuration : checked", :size => 14 
-        pdf.text "Photo of Cable laying or wireless system : unchecked", :size => 14 
+        pdf.text "\nPhoto of Turbine : #{find_check_status(1, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Turbine Serial Number : #{find_check_status(2, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of nearby Obstacles like Building, huts, water tanks and trees : #{find_check_status(3, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Tower Serial Number : #{find_check_status(4, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Panorama from Turbine Top : #{find_check_status(5, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Generator Serial Number : #{find_check_status(6, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Gearbox Serial Number : #{find_check_status(7, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Controller Versions : #{find_check_status(8, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of CT and Power Transducer Serial Number : #{find_check_status(9, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of CT Mounting : #{find_check_status(10, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Power Transducer Mounting : #{find_check_status(11, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Voltage Tapping point of Power Transducer : #{find_check_status(12, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Auxiliary supply tapping point of Power Transducer : #{find_check_status(13, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Status Signal points : #{find_check_status(14, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Data Logger Serial Number : #{find_check_status(15, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Data Logger : #{find_check_status(16, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Data Logger supply means : #{find_check_status(17, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Model and antenna : #{find_check_status(18, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Modem configuration : #{find_check_status(19, project_info.id, "turbine")}", :size => 14 
+        pdf.text "Photo of Cable laying or wireless system : #{find_check_status(20, project_info.id, "turbine")}", :size => 14 
 
         pdf.text "\n\n Met Mast CheckLists : ", :size => 17, :styles => [:bold]
 
-        pdf.text "\nPhoto of Met Mast : checked", :size => 14
-        pdf.text "Panorama from Mast Top : checked", :size => 14
-        pdf.text "Photo of Anemometer Serial Number : unchecked", :size => 14
-        pdf.text "Photo of Wind Vane Serial Number : checked", :size => 14
-        pdf.text "Photo of Temperature and Humidity serial number : checked", :size => 14
-        pdf.text "Photo of pressure sensor serial Number : unchecked", :size => 14
-        pdf.text "Photo of other sensors serial Number : checked", :size => 14
-        pdf.text "Photo of Data Logger Serial Number : checked", :size => 14
-        pdf.text "Photo of Anemometer Mounting : checked", :size => 14
-        pdf.text "Photo of Wind Vane Mounting : unchecked", :size => 14
-        pdf.text "Photo of Temperature and Humidity sensor mounting : unchecked", :size => 14
-        pdf.text "Photo of Pressure sensor mounting : checked", :size => 14
-        pdf.text "Photo of other sensors mounting : unchecked", :size => 14
-        pdf.text "Photo of Solar Panel Mounting : checked", :size => 14
-        pdf.text "Photo of Data Logger : checked", :size => 14
-        pdf.text "Photo of Data Logger supply means : unchecked", :size => 14
-        pdf.text "Photo of Model and antenna : unchecked", :size => 14
-        pdf.text "Photo of Modem configuration : checked", :size => 14
-        pdf.text "Photo of Cable laying or wireless system : checked", :size => 14
+        pdf.text "\nPhoto of Met Mast : #{find_check_status(1, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Panorama from Mast Top : #{find_check_status(2, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Anemometer Serial Number : #{find_check_status(3, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Wind Vane Serial Number : #{find_check_status(4, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Temperature and Humidity serial number : #{find_check_status(5, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of pressure sensor serial Number : #{find_check_status(6, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of other sensors serial Number : #{find_check_status(7, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Data Logger Serial Number : #{find_check_status(8, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Anemometer Mounting : #{find_check_status(9, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Wind Vane Mounting : #{find_check_status(10, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Temperature and Humidity sensor mounting : #{find_check_status(11, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Pressure sensor mounting : #{find_check_status(12, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of other sensors mounting : #{find_check_status(13, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Solar Panel Mounting : #{find_check_status(14, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Data Logger : #{find_check_status(15, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Data Logger supply means : #{find_check_status(16, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Model and antenna : #{find_check_status(17, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Modem configuration : #{find_check_status(18, project_info.id, "met_mast")}", :size => 14
+        pdf.text "Photo of Cable laying or wireless system : #{find_check_status(19, project_info.id, "met_mast")}", :size => 14
         
         project_note = ProjectNote.find_by(note_project_id: project_info.id)
         pdf.text "\n \n\n\n Project Note : ", :size => 17, :styles => [:bold]
@@ -253,9 +253,15 @@ module Api
         
       send_data pdf.render, :filename => "#{project_info.project_job_no+"-"+project_info.project_date}.pdf", :type => "application/pdf"
  
-
     end
 
+    def find_check_status(check_id, p_id, title)
+      projectCheckedList = ProjectCheckedList.find_by(project_id: p_id, title_checklist: title)
+      if projectCheckedList.present?
+        eval(projectCheckedList.checklist_items).include?(check_id) ? "checked" : "unchecked"
+      end
+    end
+ 
     
     private
   
