@@ -84,7 +84,24 @@ module Api
            :boom_panorama_picture_south_east,
            :boom_panorama_picture_east,
            :boom_panorama_picture_north_east,
-        )
+           :boom_panorama_picture_north_lat,
+           :boom_panorama_picture_north_long,
+           :boom_panorama_picture_north_west_lat,
+           :boom_panorama_picture_north_west_long,
+           :boom_panorama_picture_west_lat,
+           :boom_panorama_picture_west_long,
+           :boom_panorama_picture_south_west_lat,
+           :boom_panorama_picture_south_west_long,
+           :boom_panorama_picture_south_lat,
+           :boom_panorama_picture_south_long,
+           :boom_panorama_picture_south_east_lat,
+           :boom_panorama_picture_south_east_long,
+           :boom_panorama_picture_east_lat,
+           :boom_panorama_picture_east_long,
+           :boom_panorama_picture_north_east_lat,
+           :boom_panorama_picture_north_east_long
+          )
       end
   end
 end
+

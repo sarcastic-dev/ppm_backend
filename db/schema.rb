@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_07_171808) do
+ActiveRecord::Schema.define(version: 2020_06_27_091529) do
 
   create_table "boom_sensor_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "boom_project_id"
@@ -57,6 +57,22 @@ ActiveRecord::Schema.define(version: 2020_06_07_171808) do
     t.text "boom_panorama_picture_north_east"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "boom_panorama_picture_north_lat"
+    t.string "boom_panorama_picture_north_long"
+    t.string "boom_panorama_picture_north_west_lat"
+    t.string "boom_panorama_picture_north_west_long"
+    t.string "boom_panorama_picture_west_lat"
+    t.string "boom_panorama_picture_west_long"
+    t.string "boom_panorama_picture_south_west_lat"
+    t.string "boom_panorama_picture_south_west_long"
+    t.string "boom_panorama_picture_south_lat"
+    t.string "boom_panorama_picture_south_long"
+    t.string "boom_panorama_picture_south_east_lat"
+    t.string "boom_panorama_picture_south_east_long"
+    t.string "boom_panorama_picture_east_lat"
+    t.string "boom_panorama_picture_east_long"
+    t.string "boom_panorama_picture_north_east_lat"
+    t.string "boom_panorama_picture_north_east_long"
   end
 
   create_table "met_mast_chkls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

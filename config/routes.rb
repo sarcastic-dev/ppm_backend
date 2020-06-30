@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   
     get '/users/all', to: 'users#index'
     put '/users/active/:id', to: 'users#active'
+    get '/users/check_session', to: 'users#check_session'
     resources :project_infos
     resources :met_mast_infos
     resources :turbine_infos
