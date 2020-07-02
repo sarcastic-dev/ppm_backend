@@ -190,9 +190,26 @@ module Api
           pdf.text "Boom pressure sensor height : #{boom_sensor_info.boom_pressure_sensor_height}", :size => 14
           pdf.text "Boom temperature sensor height : #{boom_sensor_info.boom_temperature_sensor_height}", :size => 14
           pdf.text "Boom logger box height : #{boom_sensor_info.boom_logger_box_height}", :size => 14
+          pdf.text "Boom panorama picture north latitude : #{boom_sensor_info.boom_panorama_picture_north_lat}", :size => 14
+          pdf.text "Boom panorama picture north longitude : #{boom_sensor_info.boom_panorama_picture_north_long}", :size => 14
+          pdf.text "Boom panorama picture north west latitude : #{boom_sensor_info.boom_panorama_picture_north_west_lat}", :size => 14
+          pdf.text "Boom panorama picture north west longitude : #{boom_sensor_info.boom_panorama_picture_north_west_long}", :size => 14
+          pdf.text "Boom panorama picture west latitude : #{boom_sensor_info.boom_panorama_picture_west_lat}", :size => 14
+          pdf.text "Boom panorama picture west longitude : #{boom_sensor_info.boom_panorama_picture_west_long}", :size => 14
+          pdf.text "Boom panorama picture south west latitude : #{boom_sensor_info.boom_panorama_picture_south_west_lat}", :size => 14
+          pdf.text "Boom panorama picture south west longitude : #{boom_sensor_info.boom_panorama_picture_south_west_long}", :size => 14
+          pdf.text "Boom panorama picture south latitude : #{boom_sensor_info.boom_panorama_picture_south_lat}", :size => 14
+          pdf.text "Boom panorama picture south longitude : #{boom_sensor_info.boom_panorama_picture_south_west_long}", :size => 14
+          pdf.text "Boom panorama picture south east latitude : #{boom_sensor_info.boom_panorama_picture_south_east_lat}", :size => 14
+          pdf.text "Boom panorama picture south east longitude : #{boom_sensor_info.boom_panorama_picture_south_east_long}", :size => 14
+          pdf.text "Boom panorama picture east latitude : #{boom_sensor_info.boom_panorama_picture_east_lat}", :size => 14
+          pdf.text "Boom panorama picture east longitude : #{boom_sensor_info.boom_panorama_picture_east_long}", :size => 14
+          pdf.text "Boom panorama picture north east latitude : #{boom_sensor_info.boom_panorama_picture_north_east_lat}", :size => 14
+          pdf.text "Boom panorama picture north east longitude : #{boom_sensor_info.boom_panorama_picture_north_east_long}", :size => 14
         else
           pdf.text "\nNo Infomation found"
         end
+
 
         pdf.text "\n \n Wind Turbine CheckLists : ", :size => 17, :styles => [:bold]
 
