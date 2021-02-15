@@ -1,5 +1,5 @@
 class JsonWebToken
-  SECRET_KEY = Rails.application.credentials.devise_jwt_secret_key
+  SECRET_KEY = "f3b3927a63234e93235cebe0502c0d861c090758096d29fbe72ce430d87012fb8b1a4334704c34e807426f2dca51c6799c5f383db23fbc01d66033aa66762296"
 
   def self.encode(payload, exp = Rails.application.config.jwt_exp_time)
     payload[:exp] = exp.to_i
